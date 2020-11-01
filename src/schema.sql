@@ -1,0 +1,22 @@
+CREATE TABLE IF NOT EXISTS data (
+    data_id INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    pair TEXT NOT NULL UNIQUE
+);
+
+CREATE TABLE IF NOT EXISTS klines (
+    data_id BIGINT UNSIGNED NOT NULL,
+    open_time BIGINT UNSIGNED NOT NULL,
+    open DECIMAL(28, 10) NOT NULL,
+    high DECIMAL(28, 10) NOT NULL,
+    low DECIMAL(28, 10) NOT NULL,
+    close DECIMAL(28, 10) NOT NULL,
+    volume DECIMAL(28, 10) NOT NULL,
+    close_time BIGINT UNSIGNED NOT NULL,
+    quote_asset_volume DECIMAL(28, 10) NOT NULL,
+    trades BIGINT UNSIGNED NOT NULL,
+    taker DECIMAL(28, 10) NOT NULL,
+    quote DECIMAL(28, 10) NOT NULL,
+
+    PRIMARY KEY(data_id, open_time),
+    FOREIGN KEY (data_id) REFERENCES data(data_id)
+);

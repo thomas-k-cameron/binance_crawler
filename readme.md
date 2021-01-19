@@ -3,9 +3,8 @@ Crawler for collecting binance's historical data.
 Collected data will be stored in sqlite.
 
 # How To
-```
-./%directory%/binance_crawler.exe DB_PATH="$Directory Where you want to create or have the database file"
-```
+Compile the code with `cargo run --release`.
+Run the executable with option `DB_PATH=%Directory Where you want to create or have the database file%`
 
 # Schema
 ```sql

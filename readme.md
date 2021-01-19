@@ -4,7 +4,7 @@ Collected data will be stored in sqlite.
 
 # How To
 ```
-./%directory%/binance_crawler.exe DB_PATH=$Directory Where you want to create or have the database file
+./%directory%/binance_crawler.exe DB_PATH="$Directory Where you want to create or have the database file"
 ```
 
 # Schema
